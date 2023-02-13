@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Blog.create(author: 'John', title: 'John Blog', content: 'John blog content')
 Blog.create(author: 'Peter', title: 'Peter Blog', content: 'Peter blog content')
 Blog.create(author: 'Jack', title: 'Jack Blog', content: 'Jack blog content')
