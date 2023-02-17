@@ -13,9 +13,9 @@
 //= require jquery
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require underscore
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
+//= require/backbone/app
 //= require_tree .
