@@ -1,3 +1,5 @@
+//= require/backbone/app
+
 // $(document).ready(function () {
 //   $(".add-blog").on("click", function () {
 //     var blog = new Blog({
@@ -166,6 +168,7 @@ $(function () {
 });
 
 $(document).ready(function () {
+  var blogs = new App.Collections.Blogs();
   $(".add-blog").on("click", function () {
     var blog = new App.Models.Blog({
       author: $(".author-input").val(),
@@ -175,7 +178,7 @@ $(document).ready(function () {
     $(".author-input").val("");
     $(".title-input").val("");
     $(".content-input").val("");
-    App.Collections.Blogs.add(blog);
+    blogs.add(blog);
     blog.save(null, {
       success: function (response) {
         console.log("Successfully SAVED blog with id: " + response.toJSON().id);
