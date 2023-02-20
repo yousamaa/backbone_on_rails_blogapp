@@ -1,0 +1,42 @@
+.container
+  %h1
+    Backbone Js Blog App
+
+  %table.table
+    %thead
+      %tr
+        %th Author
+        %th Title
+        %th Content
+        %th Action
+      %tr
+        %td
+          %input.form-control.author-input
+        %td
+          %input.form-control.title-input
+        %td
+          %input.form-control.content-input
+        %td
+          %button.btn.btn-primary.add-blog
+            Add
+    %tbody.blogs-list
+
+%script{:type => "text/template", :class => "blogs-list-template"}
+  %td
+    %span.author
+      <%= author %>
+  %td
+    %span.title
+      <%= title %>
+  %td
+    %span.content
+      <%= content %>
+  %td
+    %button.btn.btn-warning.edit-blog
+      Edit
+    %button.btn.btn-danger.delete-blog
+      Delete
+    %button.btn.btn-success.update-blog{:style => "display:none"}
+      Update
+    %button.btn.btn-danger.cancel{:style => "display:none"}
+      Cancel
